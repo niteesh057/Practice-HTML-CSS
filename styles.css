@@ -1,151 +1,85 @@
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 body {
-  display: flex;
-  flex-direction: column;
-}
-/* --------- Navbar -------- */
-.header {
-  background-color: rgb(232, 227, 227);
-  display: flex;
-  height: 5rem;
+  max-width: 1400px;
   width: 100%;
-  box-sizing: border-box;
-  align-items: center;
-  padding: 10px 20px;
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  margin: 0 auto;
+  /* background-color: red; */
 }
-.logo-container {
-  width: 25%;
-  position: relative;
+ul li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+button:hover {
+  font-size: 100%;
+  background-color: rgb(223, 223, 223);
+}
+/* --- header --- */
+.header {
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .logo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-.logo-img {
-  height: 4rem;
-  z-index: 1;
-}
-.logo-box {
-  position: absolute;
-  border: 2px solid black;
-  width: 30%;
-  height: 60%;
-  top: 20%;
-  z-index: 0;
-}
-.logo-box-2 {
-  position: absolute;
-  width: 30%;
-  height: 60%;
-  top: 20%;
-  z-index: 0;
-}
-.logo-box {
-  left: 10%;
-}
-.logo-box-2 {
-  right: 10%;
-}
-.navbar {
-  flex: 1;
-  padding: 0 50px;
+  width: 15%;
+  margin: 0 5%;
+  margin-top: 0.5%;
 }
 .nav-links {
-  list-style: none;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+  justify-content: end;
+  gap: 20%;
+  margin: 10% 10%;
 }
-
 .nav-links li a {
   text-decoration: none;
-  color: rgb(80, 79, 79);
-  padding: 10px 15px;
-  transition: color 0.3s, font-size 0.3s, font-weight 0.3s;
-}
-.nav-links li a:hover {
   color: black;
-  font-size: large;
-  font-weight: bold;
 }
-/* ------ Home Section ----- */
-main {
-  flex: 1;
-}
+/* --- about section --- */
 .Home {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  color: white;
-  height: calc(100vh - 5rem);
-  position: relative;
+  height: 80%;
 }
-.Home-text {
-  color: black;
-  left: 0;
-  padding-top: 4rem 2rem 2rem 2rem;
-  position: absolute;
-  height: 100%;
+.home-description {
   width: 50%;
-  box-sizing: border-box;
+  padding: 0 10%;
 }
 .Home-heading {
-  position: absolute;
-  font-size: 60px;
-  top: 6rem;
-  left: 5rem;
+  font-size: 300%;
+  margin-bottom: 5%;
 }
-.Home-Lorem {
-  position: absolute;
-  line-height: 1.5;
-  left: 5rem;
-  top: 15rem;
-  right: 12rem;
+.Home-text {
+  text-align: justify;
+  margin-bottom: 5%;
 }
 .Home-button {
-  position: absolute;
-  left: 5rem;
-  right: 20rem;
-  top: 23rem;
-  bottom: 5.5rem;
   background-color: white;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 2px;
+  height: 3.75rem;
+  width: 12.5rem;
 }
-.hover-button:hover {
-  background-color: rgb(232, 227, 227);
-  font-size: 1rem;
+.Home-image {
+  width: 50%;
 }
 .Home-img {
-  right: 0;
-  width: 50%;
-  position: absolute;
-  overflow: hidden;
-  height: 100%;
-  box-sizing: border-box;
-}
-.home-img {
-  width: 100%;
-  height: 100%;
+  height: 32.125rem;
   object-fit: cover;
 }
-/* ---- About ---- */
+/* --- about section --- */
 .about {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -186,10 +120,10 @@ main {
 .about-info {
   display: flex;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: 32.063rem;
 }
 .about-img {
-  height: calc(100vh - 5rem);
+  height: 32.063rem;
 }
 .about-text {
   margin: 2rem 6rem;
@@ -202,41 +136,42 @@ main {
 .about-para {
   line-height: 1.5;
   text-align: justify;
+  margin: 1rem 0;
 }
 .learn-more {
   background-color: white;
   border: 1.5px solid black;
   width: 20%;
   height: 10%;
-  margin-top: 8%;
+  margin-top: 5%;
 }
 /* ----- Our Project ----- */
 .our-project {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 .our-project-left {
-  width: 65%;
+  width: 70%;
   padding: 3rem;
   position: relative;
 }
 .project-imag-1 {
-  height: calc(100vh - 6rem);
   position: absolute;
   left: 3rem;
+  width: 50%;
+  height: 85%;
 }
 .project-imag-2 {
   position: absolute;
   right: 3rem;
-  width: 22rem;
-  height: 20rem;
+  width: 20rem;
+  height: 16rem;
 }
 .project-text {
   position: absolute;
   bottom: 3rem;
   right: 3rem;
-  left: 29rem;
+  width: 20rem;
   text-align: justify;
 }
 .poject-heading {
@@ -246,7 +181,8 @@ main {
 }
 .our-project-right {
   background-color: black;
-  width: 35%;
+  width: 30%;
+  height: 37.1875rem;
   display: flex;
   flex-direction: column;
 }
@@ -261,9 +197,9 @@ main {
 }
 /* ---- work ---- */
 .work {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 37.1875rem;
 }
 .work-heading {
   height: 20%;
@@ -271,7 +207,8 @@ main {
   position: relative;
 }
 .star-img {
-  height: 70%;
+  height: 5rem;
+  width: 5rem;
   margin: 0 5rem;
 }
 .work-head {
@@ -305,7 +242,7 @@ main {
 }
 /* ---- gallery section ---- */
 .gallery {
-  height: 100vh;
+  height: 37.1875rem;
   position: relative;
 }
 .galleryimg {
@@ -351,7 +288,7 @@ main {
 .team {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 37.1875rem;
 }
 .team-heading {
   height: 30%;
@@ -369,8 +306,7 @@ main {
   height: 70%;
   display: flex;
   flex-direction: row;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: 0 15%;
 }
 .team-card {
   display: flex;
@@ -388,7 +324,7 @@ main {
 }
 /* ---- updates section ---- */
 .update {
-  height: 100vh;
+  height: 37.1875rem;
 }
 .update-heading {
   height: 5rem;
@@ -401,7 +337,6 @@ main {
   margin: 1rem 2rem;
 }
 .update-cards {
-  height: calc(100vh - 5rem);
   display: flex;
   flex-direction: row;
 }
@@ -423,14 +358,14 @@ main {
   width: 80%;
 }
 .update-card-button {
-  width: 40%;
-  height: 10%;
+  width: 50%;
+  padding: 5% 0;
   margin: 1.5rem 0;
   background-color: white;
 }
 /* ---- Questions Section ---- */
 .questions {
-  height: 100vh;
+  height: 37.1875rem;
   text-align: center;
 }
 .questions-heading {
@@ -474,7 +409,7 @@ textarea {
 }
 /* ---- contact section ---- */
 .contact {
-  height: 100vh;
+  height: 37.1875rem;
   overflow: hidden;
 }
 .contact-heading {
@@ -499,7 +434,7 @@ textarea {
 }
 .contact-details {
   background-color: black;
-  height: calc(100vh - 7rem);
+  height: 30.1875rem;
   color: white;
   display: flex;
   flex-direction: column;
